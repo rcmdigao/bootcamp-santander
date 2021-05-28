@@ -21,4 +21,4 @@ spring:
 #
 application:
   description: Projeto criado para o Bootcamp - Santander
-  version: 1.0
+  version: 2.0
