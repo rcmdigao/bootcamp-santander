@@ -38,7 +38,6 @@ public class StockController {
     }
 
     ///Todo Get ID
-    @ApiOperation(value = "Buscando uma categoria por ID")
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<StockDTO> findById(@PathVariable Long id){
         return ResponseEntity.ok(service.findById(id));
@@ -51,8 +50,7 @@ public class StockController {
     }
 
     ///Todo Get
-    @ApiOperation(value = "Buscando todos os registros de hoje")
-    @GetMapping(value = "/today", produces = MediaType.APPLICATION_JSON_VALUE)
+   @GetMapping(value = "/today", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<StockDTO>> findByToday(){
         return ResponseEntity.ok(service.findByToday());
     }
